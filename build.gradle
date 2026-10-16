@@ -1,0 +1,4 @@
+plugins {
+    // AGP 8.4.0 : requiert Gradle 8.6 minimum et JDK 17 pour exécuter les outils.
+    id 'com.android.application' version '8.4.0' apply false
+}
