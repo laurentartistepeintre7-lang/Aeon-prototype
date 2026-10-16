@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.aeon.prototype'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.aeon.prototype"
+        minSdk 30
+        targetSdk 34
+        versionCode 1
+        versionName "0.1"
+    }
+
+    compileOptions {
+        // Deux couches distinctes, sans contradiction :
+        // - JDK 17 exécute Gradle et AGP (chaîne d'outils de construction) ;
+        // - VERSION_1_8 fixe le niveau de bytecode de l'application elle-même.
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
